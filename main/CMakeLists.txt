@@ -6,5 +6,6 @@ idf_component_register(
         "."
     
     REQUIRES
-        REQUIRES dht11
+        dht11
+        temt6000
 )
