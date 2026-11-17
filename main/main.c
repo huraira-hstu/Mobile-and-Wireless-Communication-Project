@@ -6,7 +6,11 @@
 #include "esp_err.h"
 
 #include "dht11_service.h"
+#include "temt6000_service.h"
 #include "utils/c_utils.h"
+
+
+
 
 static const char *TAG = "main";
 
@@ -18,6 +22,10 @@ void app_main(void)
     ESP_ERROR_CHECK(dht11_service_init(action((float temperature, float humidity), {
         ESP_LOGI(TAG, "Temperature: %.1f C", temperature);
         ESP_LOGI(TAG, "Humidity: %.1f %%", humidity);
+    })));
+
+    ESP_ERROR_CHECK(temt6000_service_init(action((float illuminance), {
+        ESP_LOGI(TAG, "Illuminance=%.2flux", illuminance);
     })));
 
  
