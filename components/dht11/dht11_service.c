@@ -10,7 +10,7 @@
 
 #include "dht11_service.h"
 
-#define DHT11_PIN           GPIO_NUM_13
+#define DHT11_PIN           GPIO_NUM_33
 #define DHT11_TIMEOUT_US    100
 #define DATA_FRAME_SIZE     40
 
